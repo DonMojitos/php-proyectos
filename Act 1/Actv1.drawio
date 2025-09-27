@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram name="Página-1" id="Gkr5lLtbYVaT9yWSNYfO">
+    <mxGraphModel dx="1188" dy="660" grid="1" gridSize="14" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.315;exitY=0.985;exitDx=0;exitDy=0;entryX=0.308;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-1" target="GV84-dlw0ctX8XfJRVSm-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="200" />
+              <mxPoint x="179" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-2" target="GV84-dlw0ctX8XfJRVSm-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-1" value="CLIENTE" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="139" y="70" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-2" target="GV84-dlw0ctX8XfJRVSm-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-2" value="SERVIDOR WEB" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="139" y="360" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-3" target="GV84-dlw0ctX8XfJRVSm-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-3" target="GV84-dlw0ctX8XfJRVSm-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-3" value="SERVIDOR DE APLICACIONES" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="469" y="360" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="GV84-dlw0ctX8XfJRVSm-4" target="GV84-dlw0ctX8XfJRVSm-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-4" value="BBDD" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="870" y="360" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-8" value="Muestra contenido" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="252" y="270" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-9" value="Realiza peticiones HTTP" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="14" y="270" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-12" value="Solicita peticiones complejas" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-13" value="Devuelve los datos neceasarios" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="275" y="460" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-18" value="Pide datos tras aplicar una lógica" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="637" y="360" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-19" value="Envía los datos procesados" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="655" y="460" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-20" value="(Consultas SQL)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="684" y="322" width="112" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-21" value="(Respuesta de la BBDD)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="660" y="490" width="154" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-22" value="(HTML, JSON, XML)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="24" y="242" width="140" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-23" value="(Proceso de lógica)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="307" y="490" width="126" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="GV84-dlw0ctX8XfJRVSm-24" value="(HTML, CSS, JS)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="249" y="242" width="126" height="28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
