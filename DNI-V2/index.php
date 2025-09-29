@@ -1,8 +1,9 @@
 <?php
-    const INPUTDATA = 'Z8656215D';
+    const INPUTDATA = 'A3310738V';
     const ARRAYLETRAS = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
     const NIE = 'NIE';
     const DNI = 'DNI';
+    $valorXYZ = '';
 
     $caracterRecogido = substr(INPUTDATA, 0, 1);
     $resolTipo = $caracterRecogido != '0' && (int)$caracterRecogido <= 0 ? NIE : DNI;//SIRVE PARA CUALQUIER LETRA PERO ESTO NO NOS INTERESA EN ESTE CASO
@@ -10,6 +11,7 @@
     $txtNoValido = $resolTipo . ' NO VÁLIDO.';
 
     if($resolTipo == NIE){
+
         if($caracterRecogido == 'X'){
             $valorXYZ = 0;
         }else if ($caracterRecogido == 'Y'){
