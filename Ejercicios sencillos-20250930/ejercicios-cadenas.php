@@ -16,7 +16,11 @@
         </ul>
 
         <?php
-        // EJERCICIO 1
+            $name = 'Ivan';
+            $apelidos = 'Moreno Lopez';
+            $ciudad = 'Murcia';
+
+            echo 'Mi nombre es ' . $name . ' ' . $apelidos . " y vivo en $ciudad.";
         ?>
 
     </section>
@@ -31,7 +35,11 @@
         </ul>
 
         <?php
-        // EJERCICIO 2
+            $txt = '     Abunda la kk  ';
+            
+            echo  'Longitud: ' . strlen($txt) . ' TODO MAYUS: ' . strtoupper($txt)  . ' todo minus: ' . strtolower($txt);
+            $txtClean = trim($txt);
+            echo "Cadena sin tratar: $txt. Cadena tratada: $txtClean";
         ?>
 
     </section>
@@ -51,7 +59,9 @@
         </ul>
 
         <?php
-        // EJERCICIO 3
+            $contraseña = 'ivandoceceroseisdosmiltres';
+            echo strpos($contraseña, 'van');
+            echo 'Contraseña cifrada: ' . str_replace(['a','e','i','o','u'], ['@','€','!','0','^'], $contraseña);
         ?>
 
     </section>
