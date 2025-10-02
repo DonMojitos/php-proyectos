@@ -39,7 +39,9 @@
         </ul>
 
         <?php
-        // EJERCICIO 2
+            echo '<p>La ruta del archivo es: '. __FILE__ . '</p>';
+            echo '<p>El directorio actual es: '. __DIR__ . '</p>';
+            echo '<p>El la linea actual es: '. __LINE__ . '</p>';
         ?>
 
     </section>
@@ -55,7 +57,24 @@
         </ul>
 
         <?php
-        // EJERCICIO 3
+            define("PATATA", "papa frita");
+            echo '<p>La constante grobal contiene: '. PATATA . '.</p>';
+
+            class ClasePrueba{
+                const INCLASS = "estoy dentro de una clase";
+
+            }
+            echo ClasePrueba::INCLASS;
+            //define('PATATA', 'marico');
+            
+            const INCLASS = "valor modificado";
+            
+            echo '<p>' . INCLASS . '</p>';
+
+            $a = 'hola';
+            echo '<p>' . $a . '</p>';
+            $a = 'adios';
+            echo '<p>' . $a . '</p>';
         ?>
 
     </section>

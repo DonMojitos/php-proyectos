@@ -23,7 +23,25 @@
         <p>Haz una operación de conversión de temperatura. Declara una variable para la temperatura en grados Celsius y conviértela a Fahrenheit y a Kelvin.</p>
 
         <?php
-            // EJERCICIO 1
+            $num1 = 77;
+            $num2 = 1234;
+            $num3 = 1.2324;
+            $celsius = 36;
+            $fahrenheit = ($celsius * 9/5) + 32;
+            $kelvin = $celsius + 273.15;
+            echo '<p>---Operaciones aritméticas---</p>';
+            echo '<p>Suma: ' . $num1 + $num2 . '.</p>';
+            echo '<p>Resta: ' . $num1 - $num2 . '.</p>';
+            echo '<p>Multiplicación: ' . $num1 * $num2 . '.</p>';
+            echo '<p>División: ' . $num1 / $num2 . '.</p>';
+            echo '<p>Módulo: ' . $num1 % $num2 . '.</p>';
+            echo '<p>Potencia: ' . $num1 ** $num2 . '.</p>';
+            echo '<p>---Operaciones aritméticas---</p>';
+            echo '<p>Óperación mezcla de int/float: ' . $num1 * $num3 . '.</p>';
+            echo '<p>Grados Celsius: ' . $celsius. 'ºC.</p>';
+            echo '<p>Grados Fahrenheit: ' . $fahrenheit. 'ºF.</p>';
+            echo '<p>Grados Kelvin: ' . $kelvin. 'ºK.</p>';
+
         ?>
 
     </section>
@@ -39,7 +57,15 @@
         </ul>
 
         <?php
-        // EJERCICIO 2
+            echo '<p>Operacion \'123\' == 123 tiene como resultado: '. ('123' == 123 ? ' true':' false'). '</p>';
+            echo "<p>Operacion '123' === 123 tiene como resultado: ". ('123' === 123 ? " true":" false"). "</p>";
+            echo '<p>Operacion 0 != false tiene como resultado: '. (0 != false ? ' true':' false'). '</p>';
+            echo '<p>Operacion 0 !== false tiene como resultado: '. (0 !== false ? ' true':' false'). '</p>';
+            echo '<p>Operacion 0 > 1 tiene como resultado: '. (0 > 1 ? ' true':' false'). '</p>';
+            echo '<p>Operacion 0 < 1 tiene como resultado: '. (0 < 1 ? ' true':' false'). '</p>';
+            echo '<p>Operacion 1 >= 1.5 tiene como resultado: '. (1 >= 1.5 ? ' true':' false'). '</p>';
+            echo '<p>Operacion [1,2,3,4,5] == [\'1\',\'2\',\'3\',\'4\',\'5\'] tiene como resultado: '. ([1,2,3,4,5] == ['1','2','3','4','5'] ? ' true':' false'). ' porque solo compara el valor, no el tipo de dato</p>';
+            echo '<p>Operacion [1,2,3,4,5] === [\'1\',\'2\',\'3\',\'4\',\'5\'] tiene como resultado: '. ([1,2,3,4,5] === ['1','2','3','4','5'] ? ' true':' false'). ' porque compara el tipo de dato y el valor</p>';
         ?>
 
     </section>
@@ -56,7 +82,13 @@
         </ul>
 
         <?php
-        // EJERCICIO 3
+            echo '<p>Combinacion "true && false" tiene como resultado: ' . (true && false ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "true AND false" tiene como resultado: ' . ((true AND false) ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "true || false" tiene como resultado: ' . (true || false ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "true || false" tiene como resultado: ' . ((true OR false) ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "true XOR false" tiene como resultado: ' . ((true XOR false) ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "!false" tiene como resultado: ' . (!false ? 'true':'false') . '.</p>';
+            echo '<p>Combinacion "((true || false) && false)" tiene como resultado: ' . (((true || false) && false) ? 'true':'false') . '.</p>';
         ?>
 
     </section>
@@ -71,7 +103,21 @@
         </ol>
 
         <?php
-        // EJERCICIO 4
+            $a = 1;
+            $b = 3;
+            
+            $a = $a + $b;
+            $b = $a - $b;
+            $a = $a - $b;
+            echo "<p>$a  $b</p>";
+
+            $numero = 8;
+            echo "<p>" . ($numero % 2 === 0 ? "Es par" : "Es impar") . "</p>";
+
+            $num1 = 99;
+            $num2 = 10;
+            $num3 = 3;
+            echo "<p>Está $num1 entre $num3 y $num2: " . (($num1 >= $num3 && $num1 <= $num2) ? "Sí":"No") . "</p>"  
         ?>
 
     </section>
