@@ -60,8 +60,8 @@
 
         <?php
             $contraseña = 'ivandoceceroseisdosmiltres';
-            echo strpos($contraseña, 'van');
-            echo 'Contraseña cifrada: ' . str_replace(['a','e','i','o','u'], ['@','€','!','0','^'], $contraseña);
+            echo '<p>' . strpos($contraseña, 'van') ? 'Existe la cadena':'No existe' . '</p>';
+            echo '<p>Contraseña cifrada: ' . str_replace(['a','e','i','o','u'], ['@','€','!','0','^'], $contraseña . '</p>');
         ?>
 
     </section>
@@ -83,7 +83,22 @@
         </ul>
 
         <?php
-        // EJERCICIO 4
+            $cadena = 'ivan doce cero seis dos mil tres';
+            echo '<p>Extrayendo los 6 primeros caracteres de una cadena: ' . substr($cadena, 0, 6) . '</p>';
+            $arrCadena= explode(" ",$cadena);
+            echo "<p>Primera posicion de la cadena separada pro espacios: $arrCadena[0] </p>";
+            $arrCadena= implode(",",$arrCadena);
+            echo '<p>Nueva cadena unida por comas: ' . $arrCadena . '</p>';
+            $nombre = 'Ivan';
+            $apellido1 = 'Moreno';
+            $apellido2 = 'Lopez';
+            $ciudad = 'Murcia';
+            $nombreSW = substr($apellido1, 0, 2) . substr($nombre, 0, 3);
+            $apellidoSW = substr($apellido2, 0, 3) . substr($ciudad, 0, 3);
+            $nombreSW = strtolower($nombreSW);
+            $apellidoSW =   strtolower($apellidoSW);
+            $nombreCompleto = ucfirst($nombreSW) . ' ' . ucfirst($apellidoSW);
+            echo "<p>Mi nombre de Star Wars es: $nombreCompleto.</p>";
         ?>
 
     </section>

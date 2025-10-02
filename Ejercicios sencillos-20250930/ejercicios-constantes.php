@@ -19,7 +19,12 @@
         <p>Además, usa <code>defined()</code> para comprobar si una constante predefinida existe antes de mostrarla.</p>
 
         <?php
-        // EJERCICIO 1
+            $cu = '';
+            echo '<p>Version de PHP: ' . PHP_VERSION . '. Esta constante indica la version del interprete de PHP</p>';
+            echo '<p>Sistema Operativo: ' . PHP_OS . '. Esta constante indica el sistema operativo en el que trabaja PHP</p>';
+            echo '<p>Separador de directorios: ' . DIRECTORY_SEPARATOR . '. Esta constante indica que caracter es el que separa directorios</p>';
+            echo defined("PHP_VERSION")?'Si existe':'No existe';
+            
         ?>
 
     </section>
