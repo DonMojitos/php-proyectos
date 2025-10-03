@@ -20,7 +20,18 @@
         <p>Para cada variable, muestra su nombre, su tipo y su valor usando funciones de inspección de PHP (p. ej. gettype(), var_dump()).</p>
 
         <?php
-            // EJERCICIO 1
+            $cadena = 'Lo paró con una mano';
+            $num = 1;
+            $decimal = 34.823;
+            $isPadre = false;
+            $isMadre = true;
+            
+            
+            echo "<p>El tipo de '$cadena' es: " , var_dump($cadena) , ' y su nombre es $cadena' ,"</p>";
+            echo "<p>El tipo de '$num' es: " , var_dump($num) , ' y su nombre es $num' ,"</p>";
+            echo "<p>El tipo de '$decimal' es: " , var_dump($decimal) , ' y su nombre es $decimal' ,"</p>";
+            echo "<p>El tipo de '$isPadre' es: " , var_dump($isPadre) , ' y su nombre es $isPadre' ,"</p>";
+            echo "<p>El tipo de '$isMadre' es: " , var_dump($isMadre) , ' y su nombre es $isMadre' ,"</p>";
         ?>
 
     </section>
