@@ -24,10 +24,13 @@
         $diasTrans = $resta/86400;   
         $mesTrans = $resta/2629743;   
         $aniosTrans = $resta/31556926;   
-           
-
+        
         echo "<p>Desde la salida del GTA V han pasado: $diasTrans dias, $mesTrans meses y $aniosTrans años.</p>";
 
+        $tiempoFuturo = mktime(0, 0, 0, $mesActual + 100, $diaActual + 100, $yearActual + 100);
+        $fechaFuturo = date('Y-m-d', $tiempoFuturo);
+        $diaFuturo = date('D', $tiempoFuturo);
+        echo "<p>En 100 dias, 100 meses y 100 años será: $fechaFuturo y dia: $diaFuturo.</p>";
     ?>
 </body>
 </html>
