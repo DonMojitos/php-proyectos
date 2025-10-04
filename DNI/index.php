@@ -1,6 +1,6 @@
 <?php
     $nombreCompleto = 'Iván Moreno López';
-    $DNINoLetra = '49478847';
+    $DNINoLetra = '52814351';
     $nombreArr = explode(" ",$nombreCompleto);
     $nombreUnico = $nombreArr[0];
     $nombreCompuesto = $nombreArr[0] . " " . $nombreArr[1];

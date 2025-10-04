@@ -8,29 +8,25 @@
 </head>
 <body>
     <?php
-    $diaActual = date('d');
-    $mesActual = date('m');
-    $yearActual = date('Y');
-    $tiempoActual = mktime(0, 0, 0, $mesActual, $diaActual, $yearActual);
-    $fechaActual = date('d/m/Y', $tiempoActual);
+        $diaActual = date('d');
+        $mesActual = date('m');
+        $yearActual = date('Y');
+        $tiempoActual = mktime(0, 0, 0, $mesActual, $diaActual, $yearActual);
+        $fechaActual = date('d/m/Y', $tiempoActual);
 
-    $segundos = mktime(10000, 0, 0, $mesActual, $diaActual, $yearActual);
-    $fechaExperto = date('d/m/Y', $segundos);
+        $segundos = mktime(10000, 0, 0, $mesActual, $diaActual, $yearActual);
+        $fechaExperto = date('d/m/Y', $segundos);
 
-    echo "<p>Serás un experto el $fechaExperto</p>";
+        echo "<p>Serás un experto el $fechaExperto</p>";
 
-    $dia = date(17);
-    $mes = date(9);
-    $year = date(2013);
+        $timespan = mktime(0, 0, 0, 9, 17, 2013);
+        $resta = $tiempoActual - $timespan;
+        $diasTrans = $resta/86400;   
+        $mesTrans = $resta/2629743;   
+        $aniosTrans = $resta/31556926;   
+           
 
-
-    $timespan = mktime(0, 0, 0, $mes, $dia, $year);
-    $fecha = date('d/m/Y', $timespan);
-    $tiempoTrans = $tiempoActual - $timespan; 
-    $tiempoPasado = mktime(0, 0, $tiempoTrans, $mes, $dia, $year);
-    $tiempoSalida = date('d/m/Y', $tiempoPasado);
-
-    echo "<p>Desde la salida del GTA V han pasado: $tiempoSalida </p>";
+        echo "<p>Desde la salida del GTA V han pasado: $diasTrans dias, $mesTrans meses y $aniosTrans años.</p>";
 
     ?>
 </body>
