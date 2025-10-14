@@ -19,7 +19,7 @@
 
                 for ($i=1; $i <= $n; $i++) { 
                     echo '<tr>';
-                    for ($j=1; $j <= 10; $j++) { 
+                    for ($j=1; $j <= $n; $j++) { 
                         $resul = $i*$j;
                         
                         echo "<td>$i*$j=$resul</td>";
