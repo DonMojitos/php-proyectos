@@ -26,7 +26,7 @@
         return $resultado;
     }
 
-    function eliminarMenores($arr){
+    function eliminarMenores(&$arr){
         $seEliminaron = false;
 
         foreach ($arr as $key => $alu) {
@@ -35,14 +35,42 @@
                 $seEliminaron = true;
             }
         }
-        $arr = array_values($arr);
-        /*for ($i=0; $i < sizeof($arr); $i++) { 
-            if($arr[$i]["edad"] < 18){
-                array_splice($arr, $i, 1);
-                $seEliminaron = true;
+
+        return $seEliminaron;
+    }
+
+    function esPrimo($n){
+        $esPrimo = false;
+
+        if($n < 2){
+            return $esPrimo;
+        }
+
+        for ($i=2; $i <= $n; $i++) { 
+            if($n%$i == 0){
+                echo "da falso";
+                $esPrimo = false;
+                return $esPrimo;
+            }else{
+                $esPrimo = true;
+                return $esPrimo;
             }
-        }*/
-        return var_dump($seEliminaron);
+        }
+
+        return $esPrimo;
+    }
+
+    function listarPrimos($n){
+        $lista = [];
+
+        for ($i=0; $i < $n; $i++) { 
+            if(esPrimo($n)){
+                array_push($lista, $n);
+            }
+        }
+        
+
+        return var_dump($lista);
     }
 
 ?>
@@ -93,6 +121,12 @@
         $arrAlum = [$alu1, $alu2, $alu3, $alu4, $alu5, $alu6];
         echo eliminarMenores($arrAlum); 
     ?>
+    <p><strong>Ejercicio 6:</strong> Devuelve primos kbron</p>
+
+    <?php
+        listarPrimos(2); 
+    ?>
+    
     
 </body>
 </html>

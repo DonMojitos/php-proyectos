@@ -22,7 +22,7 @@
                     for ($j=1; $j <= $n; $j++) { 
                         $resul = $i*$j;
                         
-                        echo "<td>$i*$j=$resul</td>";
+                        echo "<td>$j*$i=$resul</td>";
                     }
                     echo '<tr>';
                 }
