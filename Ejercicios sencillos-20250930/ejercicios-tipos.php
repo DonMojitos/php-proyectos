@@ -50,7 +50,16 @@
         <p>Muestra el resultado de cada casting junto con el tipo resultante.</p>
 
         <?php
-        // EJERCICIO 2
+            $n1 = (int)"123";
+            $n2 = (int)"123abc";
+            $n3 = (int)"abc123";
+            $n4 = (String)45.67;
+            echo "<p>$n1 Tipo: " . gettype($n1) . "</p>";
+            echo "<p>$n2 Tipo: " . gettype($n2) . "</p>";
+            echo "<p>$n3 Tipo: " . gettype($n3) . "</p>";
+            echo "<p>$n4 Tipo: " . gettype($n4) . "</p>";
+            echo (bool)"0" . gettype((bool)"0");
+            echo (bool)"" . gettype((bool)"");
         ?>
 
     </section>
@@ -65,7 +74,7 @@
         <p>Incluye la inspección de tipo y valor para cada conversión.</p>
 
         <?php
-        // EJERCICIO 3
+            echo (int)true . ' '. (int)false. ' (bool)1: '.(bool)1 . ' (bool)0: '. (bool)0 . '  (bool)2: '. (bool)2;
         ?>
 
     </section>
