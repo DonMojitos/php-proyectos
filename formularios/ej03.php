@@ -1,12 +1,14 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $texto = $_POST['texto'];
-        $contador = 0;
-        $arrTexto = explode( ' ' , $texto);
+        $arrTexto = explode(' ', $texto);
         $arrAsociativo = [];
-        foreach($arrTexto as $key => $palabra){
-            $arrAsociativo["palabra_" . $contador] = $palabra;
-            $contador++;
+        foreach($arrTexto as $palabra){
+            if(key_exists($palabra,$arrAsociativo)){ 
+                $arrAsociativo[$palabra] = 1 + $arrAsociativo[$palabra];
+            }else{
+                $arrAsociativo[$palabra] = 1;
+            }
         }
     }
 ?>
@@ -26,7 +28,8 @@
     </form>
     <?php
         echo "<pre>";
-        var_dump($arrAsociativo);
+        print_r($arrAsociativo);
+       
         echo "</pre>";
     ?>
 </body>
