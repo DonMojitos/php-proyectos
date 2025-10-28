@@ -16,32 +16,25 @@
     </style>
 </head>
 <body>
-    <form action="./funciones.php" method="post">
-        <?php
-            foreach ($productos as $key => $producto) {
-                foreach ($producto as $campo => $value) {
-                    //var_dump($productos[$key][$campo]);
-                    echo $campo;
-                }
-                  
-            }
+    <table>
+        <?php foreach ($productos as $key => $producto):?>
             
-        ?>
-        <table>
-            <?php foreach ($productos as $key => $producto):?>
-                <?php foreach ($producto as $campo => $value):?>
+            <?php foreach ($producto as $campo => $value):?>
+                <thead>
+                <tr>
+                    <th><?= $campo?></th>
+                </tr>
+            </thead>
+                <tbody>
                     <tr>
-                        <th>
-                            <td><?= $campo ?></td>
-                        </th>
-                        <td>
-                            <td><?= $value ?></td>
-                        </td>
+                        <td><?= $value ?></td>
                     </tr>
-                <?php endforeach;?>  
-            <?php endforeach;?>
-            
-        </table>
+                </tbody>    
+            <?php endforeach;?>  
+        <?php endforeach;?>
+    </table>
+    <form action="./funciones.php" method="post">
+        
         <label>Campos a seleccionar: </label>
         <input type="checkbox" name="campo[]" value="id">
         <label for="id">ID</label>
