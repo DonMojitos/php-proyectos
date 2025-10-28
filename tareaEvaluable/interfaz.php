@@ -1,13 +1,27 @@
 <?php
     require './catalogo_productos.php';
-
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $campos = $_POST['campo'];
-        
-        
-        $valor = $_POST['criterio'];
-        echo "<pre>" , print_r($_POST) , "</pre>";
-        echo "<pre>" , print_r($campos) , "</pre>";
+    
+    $campos = [];
+    if(($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST)){
+        if(array_key_exists('campo',$_POST)){
+            $campos = $_POST['campo'];
+            
+        }else{
+            $_POST = [
+                "campo" => array (
+                        "0" => 'id',
+                        "1" => 'nombre',
+                        "2" => 'categoria',
+                        "3" => 'stock',
+                        "4" => 'precio',
+                    ),
+                "filtroCampo" => 'sinCampo',
+                "filtroTipo" => 'sinFiltro',
+                "criterio" => ''
+            ];
+            $campos = $_POST['campo'];
+            // echo "<pre>" , print_r($campos) , "</pre>";
+        }
     }
 ?>
 
@@ -31,17 +45,18 @@
             <th><?= $campo ?></th>
         <?php endforeach;?>
         </tr>
-        <tr>
-        <?php foreach ($productos as $producto):?>
-            <?php foreach ($producto as $value):?>
-
-                    <td><?= $value ?></td>
-                
-            <?php endforeach;?> 
-        </tr>
-        <?php endforeach;?>
-             
         
+        <?php foreach ($productos as $producto):?>
+            <tr>
+                <?php foreach ($producto as $key => $value):?>
+                    <?php foreach ($campos as $campo):?>
+                        <?php if($campo == $key):?>
+                            <td><?= $value ?></td>
+                        <?php endif;?>
+                    <?php endforeach;?>
+                <?php endforeach;?> 
+            </tr>
+        <?php endforeach;?>
     </table>
     <form method="post">
         
