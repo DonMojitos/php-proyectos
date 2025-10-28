@@ -1,5 +1,14 @@
 <?php
     require './catalogo_productos.php';
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $campos = $_POST['campo'];
+        
+        
+        $valor = $_POST['criterio'];
+        echo "<pre>" , print_r($_POST) , "</pre>";
+        echo "<pre>" , print_r($campos) , "</pre>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,32 +25,26 @@
     </style>
 </head>
 <body>
-    <form action="./funciones.php" method="post">
-        <?php
-            foreach ($productos as $key => $producto) {
-                foreach ($producto as $campo => $value) {
-                    //var_dump($productos[$key][$campo]);
-                    echo $campo;
-                }
-                  
-            }
-            
-        ?>
-        <table>
-            <?php foreach ($productos as $key => $producto):?>
-                <?php foreach ($producto as $campo => $value):?>
-                    <tr>
-                        <th>
-                            <td><?= $campo ?></td>
-                        </th>
-                        <td>
-                            <td><?= $value ?></td>
-                        </td>
-                    </tr>
-                <?php endforeach;?>  
-            <?php endforeach;?>
-            
-        </table>
+    <table>
+        <tr>
+        <?php foreach ($campos as $campo):?>
+            <th><?= $campo ?></th>
+        <?php endforeach;?>
+        </tr>
+        <tr>
+        <?php foreach ($productos as $producto):?>
+            <?php foreach ($producto as $value):?>
+
+                    <td><?= $value ?></td>
+                
+            <?php endforeach;?> 
+        </tr>
+        <?php endforeach;?>
+             
+        
+    </table>
+    <form method="post">
+        
         <label>Campos a seleccionar: </label>
         <input type="checkbox" name="campo[]" value="id">
         <label for="id">ID</label>
