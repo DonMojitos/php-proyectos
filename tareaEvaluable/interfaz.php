@@ -1,7 +1,6 @@
 <?php
     require './catalogo_productos.php';
     
-    $campos = [];
     if(($_SERVER['REQUEST_METHOD'] == 'POST') && isset($_POST)){
         if(array_key_exists('campo',$_POST)){
             $campos = $_POST['campo'];
