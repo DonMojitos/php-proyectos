@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form>
+        <label>Nombre:</label>
+        <input id="nombre" type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
+        <label>Apellidos:</label>
+        <input id="apellidos" type="text" name="datos" placeholder="Escribe tus apellidos..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
+        <label>DNI:</label>
+        <input id="dni" type="text" name="datos" placeholder="Escribe tu DNI..." pattern="^[0-9]{8}[a-zA-Z]$">
+        <label>Direccion:</label>
+        <input id="direccion" type="text" name="datos" placeholder="Escribe tu dirección..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s,.\-0-9]+$">
+        <label>Email:</label>
+        <input id="email" type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$">
+
+        <input type="submit" value="Hacer alta">
+        <input type="reset" value="Cancelar">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

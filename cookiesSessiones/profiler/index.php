@@ -12,8 +12,7 @@
     }
     
     if(isset($_COOKIE['perfil-intereses'])){
-        $intereses_guardados = json_decode($_COOKIE['perfil-intereses'], true);
-        
+        $intereses_guardados = json_decode($_COOKIE['perfil-intereses'], true); 
     }
     
 
