@@ -1,0 +1,46 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.equivocado{
+    outline:2px solid red;
+    border-color: red;
+    
+    &:focus-visible{
+        outline:2px solid red;
+        border-color: red;
+    }
+}
+.normal{
+    border-color: gray;
+    
+    
+    &:focus-visible{
+        
+        border-color: gray;
+    }
+}
+input{
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+}
+#burbuja{
+    position: absolute;
+    display: none;
+    
+    font-size: xx-small;
+    background-color: rgb(231, 210, 182);
+    border: 1.5px solid rgb(155, 127, 90);
+    border-radius: 1px;
+    padding: 2px;
+}
+label::after{
+    font-family: Arial, Helvetica, sans-serif;
+    content: '*:';
+    
+}
+.campos-formulario{
+    display: flex;
+    flex-direction: column;
+}

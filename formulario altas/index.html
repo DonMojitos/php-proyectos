@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form>
-        <label>Nombre:</label>
-        <input id="nombre" type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
-        <label>Apellidos:</label>
-        <input id="apellidos" type="text" name="datos" placeholder="Escribe tus apellidos..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
-        <label>DNI:</label>
-        <input id="dni" type="text" name="datos" placeholder="Escribe tu DNI..." pattern="^[0-9]{8}[a-zA-Z]$">
-        <label>Direccion:</label>
-        <input id="direccion" type="text" name="datos" placeholder="Escribe tu dirección..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s,.\-0-9]+$">
-        <label>Email:</label>
-        <input id="email" type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$">
+    
+    <form novalidate>
+        <div class="campos-formulario">
+            <label>Nombre</label>
+            <input id="nombre" class="normal"  type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
+            <label>Apellidos</label>
+            <input id="apellidos" class="normal" type="text" name="datos" placeholder="Escribe tus apellidos..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s]+$">
+            <label>DNI</label>
+            <input id="dni" class="normal" type="text" name="datos" placeholder="Escribe tu DNI..." pattern="^[0-9]{8}[a-zA-Z]$">
+            <label>Direccion</label>
+            <input id="direccion" class="normal" type="text" name="datos" placeholder="Escribe tu dirección..." pattern="^[a-zA-Záéíóúäëïöüàèìòù\s,º.\-0-9]+$">
+            <label>Email</label>
+            <input id="email" class="normal" type="text" name="datos" placeholder="Escribe tu nombre..." pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$">
+        </div>
+        
 
         <input type="submit" value="Hacer alta">
         <input type="reset" value="Cancelar">
