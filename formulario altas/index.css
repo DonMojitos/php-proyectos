@@ -1,60 +1,124 @@
+:root{
+    --equivocado: #e50000;
+}
+
 html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
+    font-size: 62.5%;
+}
+h2{
+    font-size: 3.5rem;
+    margin: 2rem 0;
+}
+
+p, label, .formulario-campos input{
+    font-size: 2.3rem;
+    
+}
+label{
+    margin-top: 1rem;
 }
 body{
     background-color: gray;
 }
-.equivocado{
-    outline:2px solid red;
-    border-color: red;
+::placeholder{
+    font-size: 2rem;
+}
+.formulario-campos input{
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 5px 0;
+    
+}
+.formulario-campos .equivocado{
+    outline:2px solid var(--equivocado);
+    border-color: var(--equivocado);
     
     &:focus-visible{
-        outline:2px solid red;
-        border-color: red;
+        outline:2px solid var(--equivocado);
+        border-color: var(--equivocado);
     }
 }
-.normal{
+.formulario-campos .normal{
     border-color: gray;
 
     &:focus-visible{
         border-color: gray;
     }
 }
-.formulario-campos input{
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 10px;
-    margin: 5px;
-}
 #burbuja{
+    
     position: absolute;
     display: none;
     
-    font-size: 12px;
+    font-size: 1.2rem;
     background-color: rgb(231, 210, 182);
     border: 2px solid rgb(155, 127, 90);
     color: rgba(0, 0, 0, 0.7);
-    border-radius: 1px;
+    
     padding: 4px;
 }
 label::after{
     font-family: Arial, Helvetica, sans-serif;
     content: '*:';
-    
 }
 .formulario-datos{
     display: flex;
+    flex-direction: column;
     justify-self: center;
-    max-width: 80%;
-    gap: 20px;
+    max-width: 90%;
+    gap: 3rem;
 }
 .formulario-campos{
     display: flex;  
     flex-direction: column;
-    
 }
-.formulario-alta, .formulario-listado{
-    background-color: rgb(164, 164, 164);
-    padding: 40px;
+.formulario-alta, .formulario-altas{
+    background-color: rgb(175, 175, 175);
+    padding: 0 4rem 2rem 4rem;
 }
+.formulario-altas{
+    min-height: 30rem;
+}
+@media (min-width: 768px) {
+    .formulario-datos{
+        flex-direction: row;
+    }
+}
+.formulario-botones{
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    flex-direction: column-reverse;
+}
+@media (min-width: 500px) {
+    .formulario-botones{
+        flex-direction: row;
+        justify-content: right;
+        gap: 2rem;
+    }
+}
+.formulario-botones input{
+    font-weight:600;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color .2s;
+    &:hover{
+        background-color: rgb(8, 78, 147);
+    }
+}
+.error{
+    margin: .1rem;
+    font-size: 2rem;
+    color: var(--equivocado);
+    font-weight: 600;
+}
+
