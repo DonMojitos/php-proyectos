@@ -6,7 +6,7 @@ window.addEventListener('load', () =>{
 
     let infoDialog = document.createElement('p');
     infoDialog.style.display = 'inline-block';
-    infoDialog.textContent = 'Dime el numero del objeto que quieres ver los datos: ';
+    infoDialog.textContent = 'Dime el número del objeto que quieres ver los datos: ';
 
     let inputNumeroObjeto = document.createElement('input');
     inputNumeroObjeto.type = 'number';
@@ -22,38 +22,62 @@ window.addEventListener('load', () =>{
     dialog.appendChild(boton);
     miDiv.appendChild(dialog);
 
-    
-    
-    
-
-
     function empezar(){
-        console.log('Hola');
+        
         fetch('https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/50902?nult=5')
         .then((response) =>{
             if(response.ok){
-                /* 
-                console.log(response); */
                 return response.json();
             }
         })
         .then(data => {
-            let tabla = document.createElement('table');
-            let tr = document.createElement('tr');
-            let td = document.createElement('td');
+            //console.log(data[numero])
             let numero = inputNumeroObjeto.value;
             const seleccionado = data[numero];
-            console.log(seleccionado)
+            //console.log(seleccionado)
 
-            for (const claves in seleccionado) {
+            let tabla = document.createElement('table');
+            tabla.id = 'tabla';
+
+            let tbody = document.createElement('tbody');
+            let thead = document.createElement('thead');
+
+            let trHeader = document.createElement('tr');
+            let trBody = document.createElement('tr');
+            for (const clave in seleccionado) {
+                //console.log(clave);
+                let th = document.createElement('th');
+                th.textContent = clave;
+                trHeader.appendChild(th);
                 
-                const element = seleccionado[claves];
-                console.log(element);
-                
+                const valor = seleccionado[clave];
+
+                let td = document.createElement('td');
+                td.textContent = valor;
+                trBody.appendChild(td);
+
+                tbody.appendChild(trBody);
+                thead.appendChild(trHeader);
+
+                if(valor instanceof  Array){
+                    td.textContent = '';
+                    let noPrimitivo = valor;
+                    for (const claveData in noPrimitivo) {
+                        const subValor = noPrimitivo[claveData];
+                        console.log(subValor)
+                        for (const subObjeto in subValor) {
+                            //console.log(subObjeto)
+                            const element = subValor[subObjeto];
+                            //console.log(element)
+                            td.innerHTML += `<b>${subObjeto}</b>: ${element}. `;
+                        }
+                    }
+                }
             }
-            
+            tabla.appendChild(thead);
+            tabla.appendChild(tbody);
+            miDiv.appendChild(tabla);
         });
     }
     boton.addEventListener("click", empezar);
-
 })
