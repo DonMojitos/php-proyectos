@@ -1,11 +1,12 @@
 <?php
+    require_once 'usuarios.php';
     session_start();
 
     // Aquí no podemos acceder si no hemos iniciado sesión
-    if(!isset($_SESSION['id_usuario'])){
-        header('Location: ./login.php');
-        exit;
-    }
+    // if(!isset($_SESSION['id_usuario'])){
+    //     header('Location: ./login.php');
+    //     exit;
+    // }
     var_dump($_SESSION);
 ?>
 

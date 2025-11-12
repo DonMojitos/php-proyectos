@@ -1,21 +1,33 @@
 <?php 
-    require_once './CUKIS/usuarios.php';
+    require_once './usuarios.php';
 
-    if(session_status() !== PHP_SESSION_ACTIVE){
-        session_start();
-    }
+    session_start();
 
     if(isset($_SESSION['id_usuario'])){
         header('Location: ./index.php');
+        exit;
     }
 
     if(isset($_COOKIE['recordarme'])){
         header('Location: ./index.php');
+        exit;
     }
 
-    if($_SERVER['REQUEST_METHOD'] === $_POST){
-        $usuario = $_POST['name'];
-        $pwd = $_POST['pwd'];
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $nombre_usuario = $_POST['name'] ?? '';
+        $usuario = $usuarios[$nombre_usuario] ?? null;
+        
+        
+        
+        if($usuario && $_POST['pwd'] == $usuario['pwd']){
+            $_SESSION['id_usuario'] = $usuario['id'];
+            header('Location: ./index.php');
+            exit;
+        }else{
+            echo 'error';
+            
+        }
+        
     }
 ?>
 
@@ -28,11 +40,11 @@
 </head>
 <body>
     <h1>Bienvenido al Log-in.</h1>
-    <form method="post">
+    <form method="POST">
         <label for="name">Usuario:</label>
-        <input type="text" name="name"><br>
+        <input type="text" name="name" value="<?=htmlspecialchars($nombre_usuario)?>"><br>
         <label for="pwd">Contraseña:</label>
-        <input type="text" name="pwd"><br>
+        <input type="password" name="pwd" value="uwu"><br>
         <input type="checkbox" name="recordar" >
         <label for="recordar">Recordarme</label><br>
         <input type="submit">
