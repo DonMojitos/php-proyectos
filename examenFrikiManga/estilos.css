@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "MangaT";
+    src: url("mangat.ttf");
+}
+
+*{     
+    padding:0;
+    margin:5px;
+    font-family: 'Segoe UI';
+    
+}
+
+#contenedor {
+    width:100vw;
+    height:100vh;
+}
+
+/******* PONER VUESTROS ESTILOS A PARTIR DE AQUI *******/
+html{
+    box-sizing: border-box;
+}
+#logo{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#nombre{
+    position: relative;
+    left: 120px;
+    top: 20px;
+}
+
+@media (min-width: 646px){
+    #nombre{
+        left: 180px;
+    }
+}
+@media (min-width: 961px) {
+    #nombre{
+        left: 300px;
+    }
+}
+#nombre h3{
+    font-family: MangaT;
+    font-weight: 500;
+    font-size: 1.8em;
+    position: relative;
+    left: 65px;
+}
+#nombre h4{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.3em;
+    background-color: pink;
+    padding: 7px;
+}
+#menuPrincipal{
+    width: 600px;
+    margin: 30px 10px 15px 30px;
+}
+#menuPrincipal ul li{
+    display: inline-block;
+    margin: 0;
+    padding: 5px 15px;
+    &:hover{
+        background-color: pink;
+        cursor: pointer;
+        color: white;
+    }
+    &:last-child{
+        background-color: white;
+    }
+}
+#menuH{
+    display: block;
+    margin: 10px 0;
+}
+#menuH table{
+    border-spacing: 5px;
+}
+#menuH td{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: pink;
+    cursor: pointer;
+    &:hover{
+        background-color: palevioletred;
+    }
+}
+#menuIzq{
+    display: none;
+}
+@media (min-width: 646px) {
+    #menuIzq{
+        display: block;
+    }
+    #menuH{
+        display: none;
+    }
+}
+#menuIzq table{
+    border-collapse: collapse;
+    float: left;
+    margin: 0;
+    margin-right: 15px;
+}
+#menuIzq td{
+    width: 95px;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: pink;
+    cursor: pointer;
+    &:hover{
+        background-color: palevioletred;
+    }
+}
+#contenido{
+    width: 85%;
+    margin: 0 auto;
+}
+@media (min-width: 646px) {
+    #contenido{
+        width: 70%;
+        float: left;
+    }
+}
+.ficha{
+    margin: 0 10px 10px 0;
+    float: left;
+    border: 1px solid black;
+    overflow: hidden;
+    max-width: 210px;
+    min-height: 390px;
+    
+}
+.ficha img{
+    padding: 5px;
+    margin: 0 auto;
+    width: 200px;
+    height: 250px;
+}
+.ficha div h6{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 5px 0;
+}
+.ficha div p img{
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 10px;
+    padding: 0px;
+}
+.clear, #pie{
+    clear: both;
+}
+#pie{
+    background-color: pink;
+}
+.pieIzq{
+    float: left;
+    width: 48%;
+}
+.pieDer{
+    float: right;
+    width: 48%;
+}
+.IG{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
