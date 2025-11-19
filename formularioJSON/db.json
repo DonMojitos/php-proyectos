@@ -1,3 +1,60 @@
 {
-
+  "usuarios": [
+    {
+      "id": "9c7a",
+      "nombre": "",
+      "apellidos": "",
+      "dni": "",
+      "direccion": "",
+      "email": ""
+    },
+    {
+      "id": "baf1",
+      "nombre": "",
+      "apellidos": "",
+      "dni": "",
+      "direccion": "",
+      "email": ""
+    },
+    {
+      "id": "23b2",
+      "nombre": "",
+      "apellidos": "",
+      "dni": "",
+      "direccion": "",
+      "email": ""
+    },
+    {
+      "id": "6b89",
+      "nombre": "",
+      "apellidos": "",
+      "dni": "",
+      "direccion": "",
+      "email": ""
+    },
+    {
+      "id": "fabe",
+      "nombre": "",
+      "apellidos": "",
+      "dni": "",
+      "direccion": "",
+      "email": ""
+    },
+    {
+      "id": "e763",
+      "nombre": "1",
+      "apellidos": "1",
+      "dni": "1",
+      "direccion": "1",
+      "email": "1"
+    },
+    {
+      "id": "bd55",
+      "nombre": "1",
+      "apellidos": "1",
+      "dni": "1",
+      "direccion": "1",
+      "email": "1"
+    }
+  ]
 }
