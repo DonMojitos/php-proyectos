@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre">
-        <label for="nombre">Apellidos</label>
-        <input type="text" name="nombre">
-        <label for="nombre">DNI/NIF</label>
-        <input type="text" name="nombre">
-        <label for="nombre">Direccion</label>
-        <input type="text" name="nombre">
-        <label for="nombre">Email</label>
-        <input type="email" name="nombre">
-        <input type="submit">
-    </form>
+    <div class="contenedor">
+        <form id="enviar" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre">
+            <label for="nombre">Apellidos</label>
+            <input type="text" id="apellidos">
+            <label for="nombre">DNI/NIF</label>
+            <input type="text" id="dni">
+            <label for="nombre">Direccion</label>
+            <input type="text" id="direccion">
+            <label for="nombre">Email</label>
+            <input type="text" id="email">
+            <input type="submit">
+        </form>
+    </div>
+    
+    
     <script src="script.js"></script>
 </body>
 </html>

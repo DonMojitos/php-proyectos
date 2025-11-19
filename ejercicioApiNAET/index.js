@@ -56,10 +56,9 @@ window.addEventListener('load', () =>{
                 td.textContent = valor;
                 trBody.appendChild(td);
 
-                tbody.appendChild(trBody);
-                thead.appendChild(trHeader);
+                
 
-                if(valor instanceof  Array){
+                if(valor instanceof Array){
                     td.textContent = '';
                     let noPrimitivo = valor;
                     for (const claveData in noPrimitivo) {
@@ -73,7 +72,33 @@ window.addEventListener('load', () =>{
                         }
                     }
                 }
+                
             }
+            let td = document.createElement('td');
+            
+            let bNegri = document.createElement('button');
+            bNegri.id = 'negrita';
+            bNegri.name = 'negrita';
+            bNegri.innerHTML = 'Poner de Negrita';
+            td.appendChild(bNegri);
+            
+
+            
+
+            bNegri.addEventListener('click', e =>{
+                let fila = e.target.parentNode.parentNode;
+
+                let tds = fila.getElementsByTagName('td');
+                for (const element of tds) {
+                    element.style.fontWeight = 'bold';
+                }
+            })
+
+            trBody.appendChild(td);
+
+            tbody.appendChild(trBody);
+            thead.appendChild(trHeader);
+
             tabla.appendChild(thead);
             tabla.appendChild(tbody);
             miDiv.appendChild(tabla);
