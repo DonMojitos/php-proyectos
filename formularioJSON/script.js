@@ -2,29 +2,25 @@ window.addEventListener('load', ()=>{
     enviarDatos();
 })
 
-function Usuario(){
-    let nombre = document.getElementById('nombre');
-    let apellidos = document.getElementById('apellidos');
-    let dni = document.getElementById('dni');
-    let direccion = document.getElementById('direccion');
-    let email = document.getElementById('email');
+function Usuario(datos){
     let usu = {
-        "nombre": nombre.value,
-        "apellidos": apellidos.value,
-        "dni": dni.value,
-        "direccion": direccion.value,
-        "email": email.value,
+        "nombre": datos.nombre.value,
+        "apellidos": datos.apellidos.value,
+        "dni": datos.dni.value,
+        "direccion": datos.direccion.value,
+        "email": datos.email.value,
     }
     return usu;
 }
 
 function enviarDatos(){
-    let enviar = document.getElementById('enviar');
-    enviar.addEventListener("submit", async function(e){
+    let form = document.getElementById('form');
+    
+    form.addEventListener("submit", async function(e){
         e.preventDefault();
         let url = "http://localhost:3000/usuarios";
 
-        let usu = new Usuario();
+        let usu = new Usuario(form);
         
        try {
             // Hacemos el POST al JSON Server
@@ -39,28 +35,71 @@ function enviarDatos(){
         } catch (error) {
             console.error('Error enviando datos:', error);
         }   
-        pintarTabla();
+
+        mostrarDatos();
     });
-    
 }
 
-function pintarTabla(){
+function mostrarDatos(){
+    
     let tabla = document.createElement('table');
+    let div = document.getElementById('contenedorForm');
+
     let tHead = document.createElement('thead');
     let tBody = document.createElement('tbody');
-
-    let datos = document.getElementsByName('datos[]');
-
-    for (const dato of datos) {
-        let td = document.createElement('td');
-        let th = document.createElement('th');
-        let tr = document.createElement('tr');
-
-        th.textContent = dato.id;
-        tr.appendChild(th);
-        tHead.appendChild(tr);
-
+    let trHead = document.createElement('tr');
+    tabla.classList.add('tablaUsus');
+    tabla.id = 'tablaUsus';
+    
+    let url = "http://localhost:3000/usuarios";
+    fetch(url, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+    .then(data => {
+        for (const seccion in data) {
+            let usus = data[seccion];
+            for (const clave in usus) {
+                let th = document.createElement('th');
+                th.textContent = clave;
+                trHead.appendChild(th);
+            }
+            break;
+        }
+        for (const clave in data) {
+            dato = data[clave];
+            let trBody = document.createElement('tr');
+            for (const atributo in dato) {
+                const valor = dato[atributo];
+                let td = document.createElement('td');
+                td.textContent = valor;
+                trBody.appendChild(td);
+            }
+            tBody.appendChild(trBody);
+        }
+        
+        tHead.appendChild(trHead);
+        
         tabla.appendChild(tHead);
+        tabla.appendChild(tBody);
+    })
+    .catch(err => console.log(err));
+    
+    let antiguaTabla = document.getElementById('tablaUsus');
+
+    if(antiguaTabla == null){
+        div.appendChild(tabla);
+    }else{
+        antiguaTabla.remove();
+        div.appendChild(tabla);
     }
-    document.body.appendChild(tabla);
+    limpiarCampos();
+}
+
+function limpiarCampos(){
+    let form = document.getElementById('form');
+    //hacer que lso campso se pongan limpios al enviar
+
 }
