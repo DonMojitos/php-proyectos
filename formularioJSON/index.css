@@ -1,31 +1,113 @@
-html{
+*{
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(228, 237, 239);
 }
 .contenedor{
     margin: 0 auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 90%;
-    gap: 20px;
+    gap: 50px;
+}
+th{
+    background-color: rgb(143, 210, 231);
+    text-transform: capitalize;
 }
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+     background-color: rgb(143, 210, 231);
+}
+label{
+    font-weight: 900;
 }
 input{
     display: inline-block;
     width: 210px;
+    padding: 5px;
+}
+form, .tablaUsus{
+    padding: 20px;
+    
+    box-shadow: 2px 2px 15px 8px rgba(47, 107, 125, 0.4);
 }
 .tablaUsus, tr, td, th{
-    border: 1px solid black;
+    
     border-collapse: collapse;
 }
+
 td, th{
     text-align: center;
     padding: 10px;
+}
+#enviar, #mostrarUsus{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 900;
+    background-color: rgb(11, 90, 139);
+    border: 1px solid rgb(23, 23, 93);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    transition: all .2s ease;
+    &:hover{
+        background-color: rgb(8, 43, 106);
+    }
+}
+.edit,.del{
+    
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+}
+.edit{
+    background-color: rgb(8, 134, 58);
+    transition: all .2s ease;
+    border-right: 1px solid whitesmoke;
+    &:hover{
+        background-color: rgb(9, 86, 45);
+    }
+    
+}
+.del{
+    background-color: rgb(183, 24, 24);
+    transition: all .2s ease;
+    &:hover{
+        background-color: rgb(132, 18, 18);
+    }
+}
+td input{
+    width: 80px;
+}
+#contenedorTablaBotones div{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+.aceptar,.cancelar{
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 900;
+    background-color: rgb(11, 90, 139);
+    border: 1px solid rgb(23, 23, 93);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    transition: all .2s ease;
+    &:hover{
+        background-color: rgb(8, 43, 106);
+    }
 }

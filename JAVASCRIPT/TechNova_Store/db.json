@@ -1,0 +1,32 @@
+{
+  "productos": [
+    {
+      "id": "779b",
+      "nombre": "Patata",
+      "precio": "1",
+      "categoria": "Alimento",
+      "stock": "600"
+    },
+    {
+      "id": "a4a7",
+      "nombre": "Ketchup",
+      "precio": "1.44",
+      "categoria": "Alimento",
+      "stock": "1200"
+    },
+    {
+      "id": "6853",
+      "nombre": "Detergente",
+      "precio": "10",
+      "categoria": "Limpieza",
+      "stock": "16"
+    },
+    {
+      "id": "aff7",
+      "nombre": "Jabon",
+      "precio": "2",
+      "categoria": "Higiene",
+      "stock": "400"
+    }
+  ]
+}

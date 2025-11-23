@@ -14,15 +14,18 @@
             <label>Apellidos</label>
             <input type="text" name="apellidos">
             <label>DNI/NIF</label>
-            <input type="text" name="dni">
+            <input type="text" name="dni" maxlength="9">
             <label>Direccion</label>
             <input type="text" name="direccion">
             <label>Email</label>
             <input type="text" name="email">
-            <input type="submit" value="Enviar">
+            <input id="enviar" type="submit" value="Enviar">
+            
         </form>
+        <input id="mostrarUsus" onclick="mostrarDatos()" type="button" value="Ver tabla">
     </div>
 
+    
     <script src="script.js"></script>
 </body>
 </html>
