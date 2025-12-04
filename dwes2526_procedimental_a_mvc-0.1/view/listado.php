@@ -8,9 +8,9 @@
 <body>
     <?php foreach ($entradas as $archivo => $entrada): ?>
         <h1><?= $entrada->getTitulo() ?></h1>
-        <a href="entrada_detalles.php?id=<?=$archivo?> ?>">Leer más</a>
-    <?php endforeach ?>
+        <a href="index.php?action=mostrarEntrada&id=<?= $archivo ?>">Leer más</a>
+    <?php endforeach; ?>
 
-    <p><a href="crear_entrada.php">Crear una nueva entrada</a></p>
+    <p><a href="index.php?action=crearEntrada">Crear una nueva entrada</a></p>
 </body>
 </html>

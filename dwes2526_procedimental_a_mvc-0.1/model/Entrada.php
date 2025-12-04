@@ -19,7 +19,7 @@
                 'titulo' => $this->titulo,
                 'contenido' => $this->contenido,
             ];
-            file_put_contents("{$this->titulo}.json", json_encode($datos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            file_put_contents(__DIR__ . "/../data/{$this->titulo}.json", json_encode($datos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         }
 
         public function getTitulo(){
